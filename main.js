@@ -49,6 +49,8 @@ function draw(){
 	fill("#ff0000");
 	stroke("#ff0000");
 
+	
+
 	if(scoreLeftWrist > 0.2){
 		circle(leftWristX, leftWristY, 20);
 		InNumberleftWristY = number(leftWristY);
