@@ -45,11 +45,14 @@ function modelLoaded(){
 
 function draw(){
 	image(video, 0, 0, 600, 500);
-
 	fill("#ff0000");
 	stroke("#ff0000");
 
-	
+	circle(rightWristX, rightWristY, 20);
+	if(rightWristY > 100 && leftWristY <= 100){
+		document.getElementById('speed').innerHTML = "Speed = 0.5x"
+		song.rate(0.5);
+	}
 
 	if(scoreLeftWrist > 0.2){
 		circle(leftWristX, leftWristY, 20);
@@ -59,4 +62,5 @@ function draw(){
 		document.getElementById("volume").innerHTML = "Volume: "+volume;
 		song.setValue(volume);
 	}
+
 }
